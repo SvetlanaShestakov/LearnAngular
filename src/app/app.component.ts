@@ -9,8 +9,10 @@ import {Todo} from './todo';
   providers: [TodoDataService]
 })
 export class AppComponent {
-  title = 'app';
+
   newTodo: Todo = new Todo();
+  priorities: string[] = ['Urgent','Medium','Low'];
+
   private todoDataService: TodoDataService;
   constructor(todoDataService: TodoDataService){
     this.todoDataService = todoDataService;

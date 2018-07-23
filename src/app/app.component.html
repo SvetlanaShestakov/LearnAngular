@@ -2,6 +2,11 @@
   <header class="header">
     <h1>Todos</h1>
     <input class="new-todo" placeholder="What needs to be done?" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()">
+
+    <select [(ngModel)]="newTodo.priority" id="priority">
+      <option value="" disabled selected>select a priority</option>
+      <option *ngFor="let item of priorities" [value]="item" >{{item}}</option>
+    </select>
   </header>
   <section class="main" *ngIf="todos.length >0">
     <ul class="todo-list">
@@ -9,7 +14,8 @@
         <div class="view">
           <input class="toggle" type="checkbox" (click)="toggleTodoComplete(todo)" [checked]="todo.complete">
           <label>{{todo.title}}</label>
-          <button class="destroy" (click)="removeTodo(todo)"></button>
+          <label>{{todo.priority}}</label>
+          <button class="destroy" (click)="removeTodo(todo)">Delete</button>
         </div>
       </li>
     </ul>

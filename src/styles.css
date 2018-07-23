@@ -1,1 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+#todo-list {
+  width: 530px;
+}
+
+input {
+  font-size: 20px;
+}
+
+input.error {
+  outline: solid thin red;
+}
+
+button {
+  padding: 6px 12px;
+  font-size: 16px;
+}
+
+#addItem:not(:disabled) {
+  background-color: dodgerblue;
+  color: white;
+  border: thin solid lightblue;
+}
+
+#addItem:active {
+  background-color: deepskyblue;
+}
+
+#error-message {
+  margin: 20px 0;
+  color: red;
+  height: 23px;
+}
+
+.item-amount {
+  width: 50px;
+  display: inline-block;
+  /*margin-right: 10px;*/
+}
+
+.item-name {
+  width: 300px;
+  display: inline-block;
+}
+
+.delete-item {
+  background-color: firebrick;
+  color: white;
+  border: thin solid maroon;
+}
+
+.delete-item:active {
+  background-color: firebrick;
+}/* You can add global styles to this file, and also import other style files */
