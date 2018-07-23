@@ -6,5 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Travel App';
+  newTrip = {
+    title: ""
+  }
+
+  trips = [
+    {
+      title: "Trip to Rome"
+    },
+    {
+      title: "Trip to Madrid"
+    }
+  ];
+
+  addTrip(trip) {
+    console.log("Trip", trip);
+    this.trips.push(trip);
+    this.newTrip = {title:""};
+  }
 }
+
