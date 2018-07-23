@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Greeting</title>
+</head>
+<body>
+<div>
+  <label id="hello">Hello</label>
+  <button onclick=myFunction('hello')>ClickMe</button>
+</div>
+
+
+
+</body>
+<script>
+  function myFunction(element) {
+    if(document.getElementById(element).value === 'Hello'){
+      document.getElementById(element).value = '';
+    }
+    else{
+      document.getElementById(element).value = 'Hello';
+    }
+
+  }
+</script>
+</html>

@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Todo} from './todo';
+import {T} from '@angular/core/src/render3';
 
 
 @Injectable()
@@ -40,9 +41,13 @@ export class TodoDataService {
   }
 
   getAllTodosFromLocalStorage(): Todo[] {
-    let todosFromLocalStorage: Todo[];
+    let todosFromLocalStorage: Todo[] = [];
+
     for (let todo of this.todos) {
-      todosFromLocalStorage.push(this.getFromLocalStorage(todo.id));
+      // console.log('Todo id ' + todo.id);
+      let todoFromStorage = this.getFromLocalStorage(todo.id);
+      // console.log('Todo ' + JSON.stringify(todoFromStorage));
+      todosFromLocalStorage.push(todoFromStorage);
     }
     return todosFromLocalStorage;
   }

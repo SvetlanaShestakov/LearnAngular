@@ -3,12 +3,16 @@ body {
   font-size: 20px;
 }
 
-#todo-list {
+todo-list {
   width: 530px;
 }
 
 input {
   font-size: 20px;
+}
+select {
+  font-size: 20px;
+  padding-left: 10px0;
 }
 
 input.error {

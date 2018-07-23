@@ -32,4 +32,7 @@ export class AppComponent {
   get todos(){
     return this.todoDataService.getAllTodos();
   }
+  get todosFromLocalStorage(){
+    return this.todoDataService.getAllTodosFromLocalStorage();
+  }
 }
